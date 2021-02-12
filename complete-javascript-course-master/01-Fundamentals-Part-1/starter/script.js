@@ -66,7 +66,7 @@ console.log(lastName);//return Sarkar as result, though it works its actually wr
 */
 
 //BASIC OPERATORS----------------------------------------------------------------------------------
-/**/
+/*
 //math operators
 const now = 2021;
 const ageMam = now - 1993;
@@ -95,3 +95,26 @@ console.log(ageMam >= 29);
 const isFullAge = ageMiku >= 27;
 
 console.log(now - 1991 > now - 2018);
+*/
+
+//OPERATOR PRECEDENCE-------------------------------------------------------------------------------
+/**/
+//mdn operator precedence(search in google)
+const now = 2037;
+const ageJonas = now - 1991;
+const ageSarah = now - 2018;
+
+console.log(now - 1991 > now - 2018);
+
+console.log(25 - 10 - 5);//left to right execution
+
+let x, y;
+x = y = 25 - 10 - 5;//right to left execution
+// first (25-10-5) is processed because '-' has higer precedence
+//then x = y = 10, assignment operators comes thus right to left execution
+console.log(x, y);
+
+const averageAge = (ageJonas + ageSarah) / 2;//grouping or parenthesis has highest precedence
+console.log(ageJonas, ageSarah, averageAge);
+
+
