@@ -9,6 +9,8 @@ console.log(countryPopulation > finalandPopulation);
 let averagePopulation = 33;
 console.log(countryPopulation < averagePopulation);
 
-const description = 'Portugal is in Europe, and its 11 million people speak portuguese';
+country = 'India';
+language = 'Hindi';
+const description = country + ' is in Asia, and its ' + countryPopulation + ' million people speak ' + language;
 console.log(description);
 
