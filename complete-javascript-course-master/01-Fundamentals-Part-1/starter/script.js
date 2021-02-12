@@ -119,7 +119,7 @@ console.log(ageJonas, ageSarah, averageAge);
 */
 
 //STRINGS & TEMPLATE LITERALS----------------------------------------------------------------------
-/**/
+/*
 const firstName = 'Gaurab';
 const job = 'student';
 const birthYear = 1992;
@@ -140,5 +140,29 @@ lines');
 console.log(`STRING WITH 
 MULTIPLE 
 LINES`);
+*/
+
+//TAKING DECISIONS: if / else STATEMENTS------------------------------------------------------------
+/**/
+const age = 15;
+const isOldEnough = age >= 18;
+
+if (isOldEnough) {
+  console.log(`Person can start driving license 🚗`);
+} else {
+  const yearsLeft = 18 - age;
+  console.log(`Person is too young. Wait another ${yearsLeft} years 😇`);
+};
+//else block is optional, if not created then also code will work
+//this if/else statement is called controlled structure because we can control which code blogs can work and which cannot
+
+const birthYear = 1993;
+let century;//it is declared outside if/else because it wont be available outside if declared inside if/else
+if (birthYear <= 2000) {
+  century = 20;
+} else {
+  century = 21;
+}
+console.log(century);
 
 
