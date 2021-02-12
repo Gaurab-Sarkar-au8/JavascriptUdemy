@@ -47,7 +47,7 @@ console.log(typeof year);
 
 //LET, CONST AND VAR----------------------------------------------------------------------------
 // let and const were introduced in es6, var is used in old javascript
-
+/* 
 let age = 30;
 age = 31; // muable variable, won't giv error
 
@@ -63,4 +63,35 @@ job = 'teacher';
 
 lastName = 'Sarkar';
 console.log(lastName);//return Sarkar as result, though it works its actually wrong, it doesnot create variable in the current scope, javascript will create a property in global object
+*/
 
+//BASIC OPERATORS----------------------------------------------------------------------------------
+/**/
+//math operators
+const now = 2021;
+const ageMam = now - 1993;
+const ageMiku = now - 1992;
+
+console.log(ageMam, ageMiku);//can console multple values using comma
+console.log(ageMam * 2, ageMiku / 10, 2 ** 3);
+//2**3 means 2*2*2
+
+const firstName = 'Gaurab';
+const lastName = 'Sarkar';
+console.log(firstName + " " + lastName);
+
+//assignment operators
+let x = 10 + 5;
+x += 10;
+x *= 4; // x = x*4
+x++; // x= x + 1
+x--;
+console.log(x);
+
+//comparision operators( >, <, >=, <=)
+console.log(ageMiku > ageMam);
+console.log(ageMam >= 29);
+
+const isFullAge = ageMiku >= 27;
+
+console.log(now - 1991 > now - 2018);
