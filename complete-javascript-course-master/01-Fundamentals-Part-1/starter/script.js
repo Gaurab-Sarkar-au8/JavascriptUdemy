@@ -98,7 +98,7 @@ console.log(now - 1991 > now - 2018);
 */
 
 //OPERATOR PRECEDENCE-------------------------------------------------------------------------------
-/**/
+/*
 //mdn operator precedence(search in google)
 const now = 2037;
 const ageJonas = now - 1991;
@@ -116,5 +116,29 @@ console.log(x, y);
 
 const averageAge = (ageJonas + ageSarah) / 2;//grouping or parenthesis has highest precedence
 console.log(ageJonas, ageSarah, averageAge);
+*/
+
+//STRINGS & TEMPLATE LITERALS----------------------------------------------------------------------
+/**/
+const firstName = 'Gaurab';
+const job = 'student';
+const birthYear = 1992;
+const year = 2021;
+
+const gaurab = "I'm " + firstName + ', a ' + (year - birthYear) + ' years old ' + job + '!';
+console.log(gaurab);
+
+const gaurabNew = `I'm ${firstName} and I'm a ${job}`;
+console.log(gaurabNew);
+
+console.log(`My age is 29`);
+
+console.log('String with \n\
+multiple \n\
+lines');
+
+console.log(`STRING WITH 
+MULTIPLE 
+LINES`);
 
 
