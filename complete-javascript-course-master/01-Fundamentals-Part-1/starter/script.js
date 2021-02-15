@@ -167,7 +167,7 @@ console.log(century);
 */
 
 //TYPE CONVERSION AND COERCION----------------------------------------------------------------------
-/**/
+/*
 //type conversion - when we manually convert type
 //type coersion - when javascript changes type automatically
 
@@ -193,8 +193,31 @@ console.log('23' > '2');//coercion in number
 //only plus operator does not converts it in numbers
 console.log(2+3+4+'5');//ans - "95"
 console.log('10'-'4'-'3'-2+'5');//ans - "15"
+*/
 
+//TRUTHY AND FALSY VALUES--------------------------------------------------------------------------
+/**/
+//5 falsy values: 0, '', undefined, null, NaN (when we convert to boolean it gives the value of false)
+console.log(Boolean(0));//false
+console.log(Boolean(undefined));//flase
+console.log(Boolean('Jonas'));//true
+console.log(Boolean({}));//true (as it is an object)
+console.log(Boolean(''));//false (only empty string gives the value of false)
 
+const money = 0;
+if (money) {
+  console.log("Don't spend it all ;)");
+}else{
+  console.log('You should get a job');
+}
+
+let height; 
+if (height) {
+  console.log('YAY! Height is defined');
+}else{
+  console.log('Height is UNDEFINED');
+}
+//else block will be executed because height is not assisgned any value i.e undefined
 
 
 
