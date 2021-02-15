@@ -166,7 +166,35 @@ if (birthYear <= 2000) {
 console.log(century);
 */
 
-//Type Conversion and Coercion----------------------------------------------------------------------
+//TYPE CONVERSION AND COERCION----------------------------------------------------------------------
+/**/
+//type conversion - when we manually convert type
+//type coersion - when javascript changes type automatically
+
+//type conversion:
+const inputYear = '1991';
+console.log(Number(inputYear), inputYear);//number is an inbuilt function
+console.log(inputYear + 18);
+console.log(Number(inputYear) + 18);
+
+console.log(Number('Jonas'));//reult will be NaN=Not a Number
+console.log(typeof NaN);//Nan means invalid number because typeof NaN gives result number
+
+console.log(String(21), 21);
+//javascript can convert to three types - Number, String, Boolean
+//cannot convert in undefined or NaN
+
+//type coerccon:
+console.log('I am '+ 28 +' years old');//coercion in string
+console.log('10' - '5' - 2);//coercion in number
+console.log('10' +'5' + 2);//corcion in string
+console.log('23' * '2');//coercion in number
+console.log('23' > '2');//coercion in number
+//only plus operator does not converts it in numbers
+console.log(2+3+4+'5');//ans - "95"
+console.log('10'-'4'-'3'-2+'5');//ans - "15"
+
+
 
 
 
