@@ -196,7 +196,7 @@ console.log('10'-'4'-'3'-2+'5');//ans - "15"
 */
 
 //TRUTHY AND FALSY VALUES--------------------------------------------------------------------------
-/**/
+/*
 //5 falsy values: 0, '', undefined, null, NaN (when we convert to boolean it gives the value of false)
 console.log(Boolean(0));//false
 console.log(Boolean(undefined));//flase
@@ -218,6 +218,33 @@ if (height) {
   console.log('Height is UNDEFINED');
 }
 //else block will be executed because height is not assisgned any value i.e undefined
+*/
+
+//EQUALITY OPERATORS: == VS === -------------------------------------------------------------------
+/**/
+const age = '18';
+//=== comparision operator
+//=== : strict equality oprator, it doesnot do type coercion
+if(age === 18) console.log('You just became an adult :D (Strict)');
+//== : loose equality operator
+if(age == 18) console.log('You just became an adult :D (Loose)');
+const favourite = prompt("What's your favourite number?");
+console.log(favourite);//the number input will be stored in the form of string
+console.log(typeof favourite);//can be checked with typeof
+
+if(favourite == 23) { //'23' == 23 : type coercion will take place
+  console.log('Cool! 23 is an amzing number!');
+} else if (favourite === 7) { // else if for using more conditions
+  console.log('7 is also a cool number');
+} else {
+  console.log('Number is not 23 or 7');
+}
+// if === is used above it wont work
+
+const favourites =  Number(prompt("What's your favourite number?"));
+console.log(favourites);//the number input will be stored in the form of number
+console.log(typeof favourites)
+if (favourite !== 23) console.log('Why not 23?');//!== : strict, != : loose (different operator)
 
 
 
