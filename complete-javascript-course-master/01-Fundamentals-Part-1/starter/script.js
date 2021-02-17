@@ -277,7 +277,7 @@ if(hasDriversLicense && hasGoodVision && !isTired) { // use of not operator
 */
 
 //THE SWITCH STATEMENT-----------------------------------------------------------------------------
-/* */
+/* 
 const day = 'monday';
 
 switch (day) {
@@ -318,5 +318,41 @@ if(today === 'monday') {
 } else {
   console.log('Not a valid day!');
 }
+*/
 
+//STATEMENTS AND EXPRESSION------------------------------------------------------------------------
+/* 
+//expression creates value
+3 + 4
+1991//this is a value itself
+true && false && !false 
 
+//statement is a bigger piece of code which doesnot creates value on itself 
+//declaration is like complete sentence and expressions are like words which make up the sentence
+//we write our whole program as sequense of actions and these actions are statements
+//like if/else statement, switch stataement
+if (23>10) {
+  const str = '23 is bigger';
+}//this if else statement doesnt produce value, it only performs action of creating a value str
+//In template literals we cannot insert statements, only expressions is valid
+console.log(`I am ${2021-1993} years old. My name is ${const name = 'gaurab'}`); //this will give error
+*/
+
+//THE CONDITIONAL(TERNARY) OPERATOR---------------------------------------------------------------
+/* */
+const age = 28;
+age >= 18 ? console.log('I like to drink wine! 🍷') : console.log('I like to drink water! 💧💧');
+//this has three parts => (condition part) ? (if part) : (else part), thus called ternary operator
+//using ternary operator variables can be declined conditionally
+const drink = age >= 18 ? 'wine! 🍷' : 'water! 💧💧' ;
+console.log(drink);
+//if/else example of the above code
+let drink2;
+if (age >= 18) {
+  drink2 = 'wine! 🍷';
+} else {
+  derink2 = 'water! 💧💧';
+}
+console.log(drink2);
+//using ternary operator we can have conditionals inside template literals
+console.log(`I like to drink ${age >= 18 ? 'wine! 🍷' : 'water! 💧💧'}`);
