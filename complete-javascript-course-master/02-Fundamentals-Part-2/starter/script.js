@@ -1,5 +1,5 @@
 //ACTIVATING STRICT MODE---------------------------------------------------------------------------
-/* */
+/* 
 //always write it at the top of the code
 //we can also use it for specific code blocks
 'use strict';
@@ -14,3 +14,8 @@ if (hasDriversLicense) console.log('I can drive :D');
 const interface = 'Audio';
 const private = 534;
 //interfcae, private both words are reserved by javacript for future use
+*/
+
+//FUNCTIONS-----------------------------------------------------------------------------------------
+/* */
+//function is a peace of code which we can use again and again in our code
