@@ -17,7 +17,7 @@ const private = 534;
 */
 
 //FUNCTIONS-----------------------------------------------------------------------------------------
-/* */
+/* 
 //function is a peace of code which we can use again and again in our code
 //like variables hold values, functions hold whole line of codes
 function logger() {
@@ -45,8 +45,25 @@ console.log(typeof fruitProcessor(1,1));
 
 //coding principle DRY : don't repeat yourself, functions helps to not write the same line of code again and again
 Number('23'); //these are built in functions
- 
+*/ 
 
+//FUNCTION DECLARATIONS VS EXPRESSIONS--------------------------------------------------------------
+/
+//function declaration
+const age = calcAge1(1990);//in function declaration we can call it even before it has been declared, but it is not so in function expression
 
+function calcAge1(birthYear) {//parameer is the placeholder
+  return 2037 - birthYear;
+}
+const age1 = calcAge1(1992);//argument is the actual value of the above placeholder
+console.log(age1, age);
 
+//function expression
+const calcAge2 = function(birthYear) {
+  return 2037 - birthYear;
+}
+const age2 = calcAge2(1991);
+console.log(age1, age2);
 
+//functions are values, not types
+*/
