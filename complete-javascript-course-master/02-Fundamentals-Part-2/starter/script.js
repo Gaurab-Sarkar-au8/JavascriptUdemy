@@ -69,7 +69,7 @@ console.log(age1, age2);
 */
 
 //ARROW FUNCTION---------------------------------------------------------------------------------
-/
+/*
 //arrow function is an special form of function expression
 //function expression
 const calcAge2 = function(birthYear) {
@@ -96,6 +96,21 @@ console.log(yearsUntilRetirement1(1992, 'Gaurab'));
 */
 
 //FUNCTIONS CALLING OTHER FUNCTIONS-----------------------------------------------------------------
+
+function cutFruitPieces(fruit) {
+  return fruit * 4;
+}
+
+function fruitProcessor(apples, oranges) {
+  const applePieces = cutFruitPieces(apples);
+  const orangePieces = cutFruitPieces(oranges);
+
+  const juice = `Juice with ${applePieces} pieces of apple and ${orangePieces} pieces of orange.`;
+  return juice;
+}
+
+console.log(fruitProcessor(2,3));
+
 
 
 
