@@ -48,7 +48,7 @@ Number('23'); //these are built in functions
 */ 
 
 //FUNCTION DECLARATIONS VS EXPRESSIONS--------------------------------------------------------------
-/
+/*
 //function declaration
 const age = calcAge1(1990);//in function declaration we can call it even before it has been declared, but it is not so in function expression
 
@@ -67,3 +67,35 @@ console.log(age1, age2);
 
 //functions are values, not types
 */
+
+//ARROW FUNCTION---------------------------------------------------------------------------------
+/
+//arrow function is an special form of function expression
+//function expression
+const calcAge2 = function(birthYear) {
+  return 2037 - birthYear;
+}
+//arrow function
+const calAge3 = birthYear => 2037 - birthYear;
+//return happens implicitly
+const yearsUntilRetirement = birthYear => {
+  const age = 2037 - birthYear;
+  const retirement = 65 - age;
+  return retirement;//return is used explicitly because there is more than one line of code
+}
+console.log(yearsUntilRetirement(1992));
+
+const yearsUntilRetirement1 = (birthYear, firstName) => {
+  const age = 2037 - birthYear;
+  const retirement = 65 - age;
+  return `${firstName} retire's in ${retirement} years.`
+}
+console.log(yearsUntilRetirement1(1992, 'Gaurab'));
+
+//arrow functions doesnot get a 'this' keyword
+*/
+
+//FUNCTIONS CALLING OTHER FUNCTIONS-----------------------------------------------------------------
+
+
+
