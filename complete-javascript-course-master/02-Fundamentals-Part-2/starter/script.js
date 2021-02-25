@@ -96,7 +96,7 @@ console.log(yearsUntilRetirement1(1992, 'Gaurab'));
 */
 
 //FUNCTIONS CALLING OTHER FUNCTIONS-----------------------------------------------------------------
-
+/*
 function cutFruitPieces(fruit) {
   return fruit * 4;
 }
@@ -110,6 +110,108 @@ function fruitProcessor(apples, oranges) {
 }
 
 console.log(fruitProcessor(2,3));
+*/
+
+//REVIEW FUNCTIONS--------------------------------------------------------------------------------
+/*
+const calcAge = function(birthYear) {
+  return 2037 - birthYear;
+}
+const yearsUntilRetirement = function(birthYear, firstName)  {
+  const age = calcAge(birthYear);
+  const retirement = 65 - age;
+
+  if (retirement > 0) {
+    console.log(`${firstName} retires in ${retirement} years`);
+    return retirement;
+  } else {
+    console.log(`${firstName} is retired`);//if we keep this after 'return' it would not be shown
+    return -1;    
+  }
+}
+
+console.log(yearsUntilRetirement(1991, 'Jonas'));
+console.log(yearsUntilRetirement(1950, 'Mike'));
+*/
+
+//INTRODUCTION TO ARRAYS---------------------------------------------------------------------------
+/*
+//arrays are data structures
+//in programming we get data - process data - then give back data, for these we need to store data. thats why we need data structures
+//the two most important data structure sin javascript are arrays and objects
+const friend1 = 'Michael';
+const friend2 = 'Steven';
+const friend3 = 'Peter';
+
+const friends = ['Michael', 'Steven', 'Peter'];//this is how we create array, it is called 'literal syntax'
+console.log(friends);
+
+const year = new Array(1991, 1994, 2008, 2021);//this is another way to create an array, 'Array' is function
+console.log(friends[0]);//this is how we get the elements out
+console.log(friends[2]);//these place values are called index and starts from '0'
+
+console.log(friends.length);//length is a property to know how many elements an array have
+console.log(friends[friends.length - 1]);//we can get the last element this way without knowing the index
+friends[2] = 'Jay';
+console.log(friends);
+//though 'friends' value is defined by 'const' the value can be changed, because it is not a primitive value, only primmitive values are immutable, so array is mutable as i is not primitive
+// friends = ['Bob', 'Alice']; //but this cnnot be done, we cannot replace the entire array
+
+const firstName = 'Gaurab';
+const gaurab = [firstName, 'Sarkar', 2037 - 1992, `teacher`, friends];//we can put variable, expression, and another array inside
+console.log(gaurab); 
+console.log(gaurab.length);
+
+//Exercise
+const calcAge = function (birthYear) {
+  return 2037 - birthYear;
+}
+const years = [1990, 1967, 2002, 2010, 2019];
+const age1 = calcAge(years[0]);
+const age2 = calcAge(years[1]);
+const age3 = calcAge(years[years.length - 1]);
+console.log(age1, age2, age3);
+
+const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1])];//we can do function calls also from inside an array
+console.log(ages);
+*/
+
+//BASIC ARRAY OPERATIONS(METHODS)------------------------------------------------------------------
+/**/
+//javascript has built in functions which we can apply on arrays, these are called 'methods'
+const friends = ['Michael', 'Steven', 'Peter'];
+
+//Add elements
+friends.push('Jay');
+console.log(friends);
+//push is a function, thus it returns something, it reurns a length
+const newLength = friends.push('Gon');
+console.log(newLength);
+
+friends.unshift('Jhon');//new element at the start
+//unshift also returns length
+console.log(friends);
+
+//Remove elements
+friends.pop();//removes Last element
+console.log(friends);
+//pop function returns the removed element
+console.log(friends.pop());
+
+friends.shift(); //removes first element
+console.log(friends);
+
+console.log(friends.indexOf('Steven'));//tells the index of the element
+console.log(friends.indexOf('Bob'));//if element is not there then it returns '-1'
+
+console.log(friends.includes('Steven'));//es6 method for knwing index, it returns true or false
+console.log(friends.includes('Bob'));
+
+ 
+
+
+
+
 
 
 
