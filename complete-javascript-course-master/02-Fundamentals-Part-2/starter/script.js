@@ -207,6 +207,27 @@ console.log(friends.indexOf('Bob'));//if element is not there then it returns '-
 console.log(friends.includes('Steven'));//es6 method for knwing index, it returns true or false
 console.log(friends.includes('Bob'));
 
+friends.push(23);
+console.log(friends.includes('23'));
+console.log(friends.includes(23));//'includes' method includes strict equality for checking, thus in 23 it will give true, and in '23' it will give false
+
+//we can use this method to write conditionals
+if (friends.includes('Bob')) {
+  console.log('You have a friend called Bob');
+} else {
+  console.log('You dont have friend called Bob');
+}
+
+
+
+
+
+
+
+
+
+
+
  
 
 
