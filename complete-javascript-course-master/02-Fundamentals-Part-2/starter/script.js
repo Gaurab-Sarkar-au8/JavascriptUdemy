@@ -179,6 +179,7 @@ console.log(ages);
 //BASIC ARRAY OPERATIONS(METHODS)------------------------------------------------------------------
 /**/
 //javascript has built in functions which we can apply on arrays, these are called 'methods'
+/* 
 const friends = ['Michael', 'Steven', 'Peter'];
 
 //Add elements
@@ -217,23 +218,30 @@ if (friends.includes('Bob')) {
 } else {
   console.log('You dont have friend called Bob');
 }
+*/
+
+//INTRODUCTION TO OBJECTS--------------------------------------------------------------------------
+
+//like arrays, objects is another data structure in javascript
+const jonasArray = [
+  'Jonas',
+  'Schmedtmann',
+  2037 - 1991,
+  'teacher',
+  ['Michael', 'Peter', 'Steven']
+];
+//objects are key value pairs
+const jonas = {
+  firstName: 'Jonas',
+  lastName: 'Schmedtmann',
+  age: 2037 - 1991,
+  job: 'teacher',
+  friends: ['Michael', 'Peter', 'Steven']
+};
+//keys are also called properties, like object 'jonas' has property of firstName with value of 'Jonas'
+//objects are most fundamental concept in the whole javascript language
+//there are many ways of creating an object, using curly braces {} is the most simple way, and it is called the object litral syntax
+//arrays for structured or ordered data because order of elements matters, objects for unstructured data, we get data from objects with respect to property names
 
 
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
+//
