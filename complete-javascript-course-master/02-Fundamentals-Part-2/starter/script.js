@@ -221,7 +221,7 @@ if (friends.includes('Bob')) {
 */
 
 //INTRODUCTION TO OBJECTS--------------------------------------------------------------------------
-
+/*
 //like arrays, objects is another data structure in javascript
 const jonasArray = [
   'Jonas',
@@ -242,6 +242,46 @@ const jonas = {
 //objects are most fundamental concept in the whole javascript language
 //there are many ways of creating an object, using curly braces {} is the most simple way, and it is called the object litral syntax
 //arrays for structured or ordered data because order of elements matters, objects for unstructured data, we get data from objects with respect to property names
+*/
 
+//DOT AND BRACKET NOTATION------------------------------------------------------------------------
+//we change and retrive data from object using dot and bracket notation
+const jonas = {
+  firstName: 'Jonas',
+  lastName: 'Schmedtmann',
+  age: 2037 - 1991,
+  job: 'teacher',
+  friends: ['Michael', 'Peter', 'Steven']
+};
+console.log(jonas);//properties are ordered alphabatically in console, thus order of properties doesnot matter
+
+//getting properties with dot notation
+console.log(jonas.firstName);//'.' dot is an operator which goes in the 'jonas' and brings back the property
+//bracket notation
+console.log(jonas['firstName']);//in this way we can write opertation inside the bracket and make it compute the property, for example:
+const nameKey = 'Name';
+console.log(jonas['first' + nameKey]);
+console.log(jonas['last' + nameKey]);//but this will not work in dot notation
+//so use bracket notation for computation, or else use dot notation
+
+const intrestedIn = prompt('What do you want to know about Jonas? Choose between firstName, lastName, age, job and friends');
+console.log(jonas.intrestedIn);//undefined, because object 'jonas' has no property 'intrestedIn'
+console.log(jonas[intrestedIn]);
+
+if(jonas[intrestedIn]) {
+  console.log(jonas[intrestedIn]);
+} else {
+  console.log('Wrong request! Choose between firstName, lastName, age, job and friends');
+}
+
+//adding properties 
+jonas.location = 'Portugal';
+jonas['twitter'] = '@jonasschmedtmann';
+console.log(jonas);
+
+//challenge
+//print 'Jonas has 3 best friends, and his best friend is called Michael'
+console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`);
+//'jonas.friends' acts as an array so we can apply 'length' and '[0]' like we do in arrays
 
 //
