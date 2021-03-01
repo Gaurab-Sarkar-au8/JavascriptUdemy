@@ -245,6 +245,7 @@ const jonas = {
 */
 
 //DOT AND BRACKET NOTATION------------------------------------------------------------------------
+/*
 //we change and retrive data from object using dot and bracket notation
 const jonas = {
   firstName: 'Jonas',
@@ -283,5 +284,72 @@ console.log(jonas);
 //print 'Jonas has 3 best friends, and his best friend is called Michael'
 console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`);
 //'jonas.friends' acts as an array so we can apply 'length' and '[0]' like we do in arrays
+*/
 
-//
+//OBJECT METHODS------------------------------------------------------------------------------------
+//functions are values, so it means we can create a 'key : value' pair such that the 'value' is a 'function'
+//any function attached to object is called 'method'
+const jonas = {
+  firstName: 'Jonas',
+  lastName: 'Schmedtmann',
+  birthYear: 1991,
+  job: 'teacher',
+  friends: ['Michael', 'Peter', 'Steven'],
+  hasDriversLicense: true,
+
+  calcAge: function(birthYear) {
+    return 2037 - birthYear;
+  },
+
+  //read birthyear directly from the object
+  calcAge1: function() {
+    console.log(this);//'this' is equal to 'jonas' object
+    return 2037 - this.birthYear; //this.birthYear = jonas.birthYear, (if we write jonas.birthYear then also it will work, but if object name 'jonas' is changed above then it will create an error, thus we use 'this' keyword)
+  },
+  //'this' keyword or 'this' variable is basically equal to the object on which the method is called, it is equal to th object calling the method
+
+  //store the value of function in the object, and call it when needed
+  calcAge2: function() {
+    this.age = 2037 - this.birthYear;
+    return this.age;
+  }
+};
+//method is a property which holds a funcion value
+console.log(jonas.calcAge(1990));
+console.log(jonas['calcAge'](1992));
+
+console.log(jonas.calcAge1());//the 'jonas' object is calling the method, so 'this' keyword will be equal to 'jonas'
+
+//if we used to call jonas.calcAge1 multiple times then it is a heavier computation because for te same value four times computation is done, thus we use 'calcAge2' method, in this method we store the value by creating a property of the object named 'age' and calling it four times
+console.log(jonas.age);
+console.log(jonas.age);
+console.log(jonas.age);
+console.log(jonas.age);
+
+//Challange:
+//"Jonas is a 46-year old teacher, and he has a drivers license"
+const jonas1 = {
+  firstName: 'Jonas',
+  lastName: 'Schmedtmann',
+  birthYear: 1991,
+  job: 'teacher',
+  friends: ['Michael', 'Peter', 'Steven'],
+  hasDriversLicense: true,
+
+  calcAge4: function() {
+    this.age = 2037 - this.birthYear;
+    return this.age;
+  },
+
+  getSummary: function() {
+    return `${this.firstName} is a ${this.calcAge4()}-year old ${this.job}, and he ${this.hasDriversLicense ?'a' : 'no'} drivers license`;
+  } 
+}
+console.log(jonas1.getSummary());
+//arrays are also objects, its just that they are special kind of objects, they have functions or methods that we can use to manipulate them like push, pop etc., these methods are built in, thus arrays are objects since they have methods
+
+
+
+
+
+
