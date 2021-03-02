@@ -371,8 +371,8 @@ for(let rep = 1; rep <= 10; rep++) {
 }
 */
 
-//LOOPING ARRAYS, BREAKING AND CONTINUING-----------------------------------------------------------
-/**/
+//LOOPING ARRAYS, BREAKING AND CONTINUING----------------------------------------------------------
+/*
 //one of the most used applications of for loop is to loop through arrays
 const jonas = [
   'Jonas',
@@ -409,25 +409,44 @@ for(let i = 0; i < years.length; i++){
   ages.push(2037 - years[i]);
 }
 console.log(ages);
-
 //continue and break
 //continue is to exit the current iteraton of the loop and continue to the next one
 //break is used to completely terminate the whole loop
-
 console.log('---ONLY STRINGS---');
 for(let i = 0; i < jonas.length; i++){
   if(typeof jonas[i] !== 'string') continue;
 
   console.log(jonas[i], typeof jonas[i]);
 }
-
 console.log('---BREAK WITH NUMBERS---');
 for(let i = 0; i < jonas.length; i++){
   if(typeof jonas[i] === 'number') break;
 
   console.log(jonas[i], typeof jonas[i]);
 }
+*/
 
+//LOOPING BACKWARDS AND LOOPS IN LOOPS--------------------------------------------------------------
+/**/
+//looping backward
+const jonas = [
+  'Jonas',
+  'Schmedtmann',
+  2037 - 1991,
+  'teacher',
+  ['Michael', 'Peter', 'Steven'],
+  true
+];
 
+for(let i = jonas.length - 1; i >= 0; i--){
+  console.log(i, jonas[i]);
+}
 
+//loops in loops
+for(let exercise = 1; exercise < 4; exercise++) {
+  console.log(`----------------Starting exercise ${exercise}`);
 
+  for(let rep = 1; rep < 6; rep++) {
+    console.log(`Exercise ${exercise}: Lifting weight repitition ${rep} 🏋️‍♂️`);
+  }
+}
