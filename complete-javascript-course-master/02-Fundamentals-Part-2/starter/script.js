@@ -427,7 +427,7 @@ for(let i = 0; i < jonas.length; i++){
 */
 
 //LOOPING BACKWARDS AND LOOPS IN LOOPS--------------------------------------------------------------
-/**/
+/*
 //looping backward
 const jonas = [
   'Jonas',
@@ -450,3 +450,27 @@ for(let exercise = 1; exercise < 4; exercise++) {
     console.log(`Exercise ${exercise}: Lifting weight repitition ${rep} 🏋️‍♂️`);
   }
 }
+*/
+
+//THE WHILE LOOP-----------------------------------------------------------------------------------
+//for loop
+for(let rep = 1; rep <= 10; rep++) {
+  console.log(`Lifting weights repitition ${rep} 🏋️‍♂️`);
+}
+//while loop
+let rep = 1;
+while(rep <= 10) {
+  console.log(`WHILE: Lifting weights repitition ${rep} 🏋️‍♂️`);
+  rep++;//if we dont write rep++ it will go on infinitely
+} 
+//while loop only needs condition to run, it doesnt needs any counter or increament value
+
+//CASE: we are going to roll a dice and then we keep rolling the dice untill we roll 6, when we roll the 6 we stop
+let dice = Math.trunc(Math.random() * 6) + 1;//Math.random gives values between 0 and 1, when we multiply it with 6 it gives us decimal values, to remove the decimal part we use Math.trunc and then add 1
+console.log(dice);  
+while(dice !== 6) {
+  console.log(`You rolled a ${dice}`);
+  dice = Math.trunc(Math.random() * 6) + 1;
+  if(dice === 6) console.log('Loop is about to end....');
+}
+//when you dont know how many iterartions the loop will take place while loop is the best option
