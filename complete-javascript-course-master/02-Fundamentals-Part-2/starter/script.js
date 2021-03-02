@@ -351,7 +351,7 @@ console.log(jonas1.getSummary());
 */
 
 //ITERATION: THE FOR LOOP---------------------------------------------------------------------------
-/**/
+/*
 //like if/else statements, the other controlled structures are loops 
 //loops allows us to automate the repititive tasks, thus important in every programming language
 // console.log(`Lifting weights repitition 1 🏋️‍♂️`);
@@ -369,8 +369,64 @@ console.log(jonas1.getSummary());
 for(let rep = 1; rep <= 10; rep++) {
   console.log(`Lifting weights repitition ${rep} 🏋️‍♂️`);
 }
+*/
 
+//LOOPING ARRAYS, BREAKING AND CONTINUING-----------------------------------------------------------
+/**/
+//one of the most used applications of for loop is to loop through arrays
+const jonas = [
+  'Jonas',
+  'Schmedtmann',
+  2037 - 1991,
+  'teacher',
+  ['Michael', 'Peter', 'Steven'],
+  true
+];
+//reading array
+for(let i = 0; i < 5; i++){ //this is hardcoded, if new elements are added then it wont be shown
+  console.log(jonas[i]);
+}
+for(let i = 0; i < jonas.length; i++){//new elements auomatically gets included
+  console.log(jonas[i], typeof jonas[i]);
+}
 
+//filling an array
+const types = [];//we create an empty array
+const types1 = [];
+for(let i = 0; i < jonas.length; i++) {
+  types[i] = typeof jonas[i];
+  //this can be also written as:
+  types1.push(typeof jonas[i]);
+}
+console.log(types);
+console.log(types1);
+
+//another example of filling an array
+const years = [1991, 2007, 1969, 2021];
+const ages = [];
+
+for(let i = 0; i < years.length; i++){
+  ages.push(2037 - years[i]);
+}
+console.log(ages);
+
+//continue and break
+//continue is to exit the current iteraton of the loop and continue to the next one
+//break is used to completely terminate the whole loop
+
+console.log('---ONLY STRINGS---');
+for(let i = 0; i < jonas.length; i++){
+  if(typeof jonas[i] !== 'string') continue;
+
+  console.log(jonas[i], typeof jonas[i]);
+}
+
+console.log('---BREAK WITH NUMBERS---');
+for(let i = 0; i < jonas.length; i++){
+  if(typeof jonas[i] === 'number') break;
+
+  console.log(jonas[i], typeof jonas[i]);
+}
 
 
 
