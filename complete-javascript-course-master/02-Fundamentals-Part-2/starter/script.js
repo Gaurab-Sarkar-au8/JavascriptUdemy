@@ -287,6 +287,7 @@ console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his bes
 */
 
 //OBJECT METHODS------------------------------------------------------------------------------------
+/*
 //functions are values, so it means we can create a 'key : value' pair such that the 'value' is a 'function'
 //any function attached to object is called 'method'
 const jonas = {
@@ -347,6 +348,27 @@ const jonas1 = {
 }
 console.log(jonas1.getSummary());
 //arrays are also objects, its just that they are special kind of objects, they have functions or methods that we can use to manipulate them like push, pop etc., these methods are built in, thus arrays are objects since they have methods
+*/
+
+//ITERATION: THE FOR LOOP---------------------------------------------------------------------------
+/**/
+//like if/else statements, the other controlled structures are loops 
+//loops allows us to automate the repititive tasks, thus important in every programming language
+// console.log(`Lifting weights repitition 1 🏋️‍♂️`);
+// console.log(`Lifting weights repitition 2 🏋️‍♂️`);
+// console.log(`Lifting weights repitition 3 🏋️‍♂️`);
+// console.log(`Lifting weights repitition 4 🏋️‍♂️`);
+// console.log(`Lifting weights repitition 5 🏋️‍♂️`);
+// console.log(`Lifting weights repitition 6 🏋️‍♂️`);
+// console.log(`Lifting weights repitition 7 🏋️‍♂️`);
+// console.log(`Lifting weights repitition 8 🏋️‍♂️`);
+// console.log(`Lifting weights repitition 9 🏋️‍♂️`);
+// console.log(`Lifting weights repitition 10 🏋️‍♂️`);
+//this violates DRY principle, and also we have problem if there is any change required
+//loops has three parts, 1.initial value of a counter, 2.logical condition that is evaluated before each iteration of loop( for loop keeps running while condition is TRUE, once the value becomes FALSE the loop stops), 3.increasing the counter, this takes place after the end of each iterartion
+for(let rep = 1; rep <= 10; rep++) {
+  console.log(`Lifting weights repitition ${rep} 🏋️‍♂️`);
+}
 
 
 
