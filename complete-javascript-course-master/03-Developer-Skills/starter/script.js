@@ -20,4 +20,14 @@ console.log();
 */
 
 //INSTALLING NODE JS AND SETTING UP A DEV ENVIRONMENT-----------------------------------------------
-/**/
+/*
+//Live server
+//we can create live server 1.either by installing the vs code extension, 2.another way(professional way) is to use node js and npm package
+//1.METHOD: download 'live server' extension, bottom right corner of screen press 'Go Live' button which has appeared after installation
+//2.METHOD: install node js(node js is a javascript runtime, node js is a way of running javascript outside the browser and also runnning development tools like the 'live server'), then install npm package named 'live server'
+
+//install node js, open terminal and type 'node-v', this will give version of npm, then type in terminal 'npm install live-server -g' for installing live server, '-g' means globally this will make live server available all over the computer
+//npm is node package manager, which is basically a program to download tools
+//now if you type 'live-server' in terminal and press enter, it will start
+console.log(`javascript is funny`);
+*/
