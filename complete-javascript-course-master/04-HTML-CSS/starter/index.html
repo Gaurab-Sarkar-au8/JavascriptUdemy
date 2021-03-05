@@ -1,8 +1,32 @@
 <!-- html stands for hyper text markup language, used for describing contents of web pages -->
 <!-- every html doc has opening and closing with html tag, inside this we have head and body tag -->
 <!-- "!" pressing this and enter will create a basic html structure like above -->
-<!DOCTYPE html>
+
+<!-- <!DOCTYPE html> -->
 <!-- doctype tells that document is html 5,  -->
+<!-- <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning HTML & CSS</title>
+  </head>
+  <body>
+    <h1>JavaScript is fun, but so is HTML & CSS!</h1>
+    <p>
+      You can learn JavaScript without HTML and CSS, but for DOM manipulation
+      it's useful to have some basic ideas of HTML & CSS.
+      <a href="https://www.udemy.com/user/jonasschmedtmann/">Jonas on udemy</a>
+    </p>
+    <h2>Another heading</h2>
+    <p>Just another paragraph</p>
+  </body>
+</html> -->
+<!-- ----------------------------------------------------------------------------------------- -->
+
+<!-- CHILD ELEMENTS: Like h1, p, h2 are child elements of body elements -->
+
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -15,8 +39,30 @@
     <p>
       You can learn JavaScript without HTML and CSS, but for DOM manipulation
       it's useful to have some basic ideas of HTML & CSS.
+      <!-- attributes are used to describe elements -->
+      <!-- anchor element, its attribute is 'href', its an inline element
+      h2 is a block element-->
+      <a href="https://www.udemy.com/user/jonasschmedtmann/">Jonas on udemy</a>
     </p>
     <h2>Another heading</h2>
-    <p>Just another paragraph</p>
+    <p class="second">Just another paragraph</p>
+    <!-- image has only opening tag, no closing tag -->
+    <img
+      id="course-image"
+      src="https://img-b.udemycdn.com/course/240x135/437398_46c3_9.jpg?secure=dIyv9s4veKMjfwEXWq3vmQ%3D%3D%2C1615010781"
+    />
+    <!-- attributes of one element is not going to work in another element, but there are two attributes that can be used with every element, they are 'classes' and 'ids', we use them to name elements so we can later select them,  -->
+    <!-- ids are unique so can be used once, bu classes can be used over and over again -->
+
+    <!-- div is like a box in html -->
+    <!-- form is a box which is like div but has a meaning, SEMANTICS, SEO in google also understands it better, div has no meaning to it -->
+    <form id="your-name">
+      <!-- NAMING CONVENTION = html:'your-name', javaScript:'yourName' -->
+      <h2>Your name here</h2>
+      <p>Please fill in this form :)</p>
+      
+      <input type="text" placeholder="Your name">
+      <button>OK!</button>
+    </form>
   </body>
 </html>
